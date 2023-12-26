@@ -39,7 +39,8 @@ Route::get('/', function () {
     // $images = json_decode(Storage::disk('local')->get('json/gallery.json'), true);
     // return view('welcome', compact('images'));
     // dd(Gallery::all()[0]);
-    return view('home', [ 'galleries' => Gallery::getAll() ]);
+    return view('home', [ 'galleries' => Gallery::orderBy('seq-no', 'asc')->get() ]);
+    // return view('home', [ 'galleries' => Gallery::getAll() ]);
     // return view('home', [ 'galleries' => Gallery::all()[0]]);
 });
 
