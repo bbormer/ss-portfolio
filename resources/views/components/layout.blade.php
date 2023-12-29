@@ -19,7 +19,7 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>satomi suzuki | まだ見たことのない景色 — 作家さとみすずき</title>
+        <title>まだ見たことのない景色 — 作家さとみすずき | sceneries never seen before — artist satomi suzuki</title>
         <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -152,7 +152,7 @@
         })
         // document.head.querySelector('meta[name="description"]').content = `${window.navigator.language.substring(0,2) == 'ja' ? "日本語メタデスクリプション" : "English meta description"}`;
         // document.title = `${window.navigator.language.substring(0,2) == 'ja' ? "satomi suzuki | まだ見たことのない景色" : "satomi suzuki | sceneries never seen before"}`
-        document.title = `satomi suzuki | {{ __('sceneries never seen before — artist satomi suzuki') }}`
+        document.title = `{{ __('sceneries never seen before — artist satomi suzuki | まだ見たことのない景色 — 作家さとみすずき') }}`
       </script>
 
       <style type="text/css">
