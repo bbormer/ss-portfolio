@@ -75,7 +75,8 @@
               {{-- <img src="{{ asset('storage/'.$image['file']) }}" class="block w-full h-auto" /> --}}
             </figure>
             <div class="absolute top-0 bottom-0 left-0 right-0 h-full w-full opacity-0 bg-blue-400 ease-in duration-300 hover:opacity-[0.6]">
-              <a x-bind:href="`/gallery/{{ $image['id'] }}`" class="text-white text-5xl absolute top-[45%] left-[43%] text-center translate-[-50%_-50%] animate-bounce"><i class="fa-solid fa-magnifying-glass"></i>
+              <a href="/gallery/{{ $image['id'] }}" class="text-white text-5xl absolute top-[45%] left-[43%] text-center translate-[-50%_-50%] animate-bounce"><i class="fa-solid fa-magnifying-glass"></i>
+              {{-- <a x-bind:href="`/gallery/{{ $image['id'] }}`" class="text-white text-5xl absolute top-[45%] left-[43%] text-center translate-[-50%_-50%] animate-bounce"><i class="fa-solid fa-magnifying-glass"></i> --}}
             </a>
           </div>
           </div>

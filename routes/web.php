@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Order;
 use App\Models\Gallery;
 use App\Mail\ContactMail;
 use App\Models\Notification;
@@ -11,7 +12,8 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\SquareController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\GalleryController;
- 
+use Square\Models\OrderEntry;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -83,10 +85,16 @@ Route::get('/contact', [ContactController::class, 'show'])->name('contact.show')
 Route::post('/contact/validate', [ContactController::class, 'validateForm'])->name('contact.validate');
 // Route::post('/contact/submit', [ContactController::class, 'submit'])->name('contact.submit');
 
+// Route::get('/square/{id}', function($id) {
+//     [Order::class, 'gallery' => Gallery::find($id)];
+// });
+    // return view('livewire.order', ['gallery' => Gallery::find($id)]);
+// });
 Route::get('/square/{id}', function ($id) {
     return view('square', ['gallery' => Gallery::find($id)]);
 });
 
 Route::post('/square/validate/{id}', [SquareController::class, 'validateForm'])->name('square.validate');
 // Route::get('/square/createPayment', [SquareController::class, 'initiatePayment'])->name('square.initiatePayment');
+// Route::post('/square/createPayment', [OrderEntry::class, 'createPayment'])->name('square.createPayment');
 Route::post('/square/createPayment', [SquareController::class, 'createPayment'])->name('square.createPayment');

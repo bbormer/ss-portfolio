@@ -14,7 +14,7 @@
     "city is required": "市町村は必須です",
     "prefecture (required)": "都道府県（必須）",
     "prefecture is required": "都道府県は必須です",
-    "postal code (required | auto-fill address)": "郵便番号（必須 | フィールド移動で住所検索します）",
+    "postal code (required)": "郵便番号（必須）",
     "postal code is invalid": "郵便番号形式が無効です",
     "postal code is required": "郵便番号は必須です",
     "country": "国",
@@ -36,5 +36,12 @@
     "I am an APPLE": "ぼくはりんご",
     "Thank you for ordering": "ご注文ありがとうございます",
     "Payment ID": "決済ID",
-    "order details": "注文詳細"
+    "order details": "注文詳細",
+    "proceed": "進む",
+    "search": "検索",
+    " yen": " 円",
+    "pay": ":amount 支払う",
+    "cannot find zipcode": "郵便番号から住所が見つかりませんでした。",
+    "Payment ID": "決済ID",
+    "convert currency": "通貨変換"
 }

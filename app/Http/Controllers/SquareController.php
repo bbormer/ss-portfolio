@@ -68,7 +68,7 @@ class SquareController extends Controller
                 $payment_id = $res->getResult()->getPayment()->getId();
                 $mail_status = 1;
                 try {
-                    Mail::to($data['email'])->send(new PaymentAcknowledgement($req->note, $payment_id));
+                    // Mail::to($data['email'])->send(new PaymentAcknowledgement($req->note, $payment_id));
                 } catch (Exception $e) {
                     $mail_status = 0;
                 }
@@ -111,6 +111,7 @@ class SquareController extends Controller
         ];
 
         session()->put($data);
+        session(['validateStatus' => true]);
 
         return back();
         // return redirect()->with($data);

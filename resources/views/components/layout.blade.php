@@ -20,7 +20,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>まだ見たことのない景色 — 作家さとみすずき | sceneries never seen before — artist satomi suzuki</title>
-        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script>
+        {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.3/dist/cdn.min.js"></script> --}}
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -147,9 +147,9 @@
       </dialog> --}}
 
       <script>
-        document.addEventListener('alpine:init', () => {
-          Alpine.store('locale', window.navigator.language)
-        })
+        // document.addEventListener('alpine:init', () => {
+        //   Alpine.store('locale', window.navigator.language)
+        // })
         // document.head.querySelector('meta[name="description"]').content = `${window.navigator.language.substring(0,2) == 'ja' ? "日本語メタデスクリプション" : "English meta description"}`;
         // document.title = `${window.navigator.language.substring(0,2) == 'ja' ? "satomi suzuki | まだ見たことのない景色" : "satomi suzuki | sceneries never seen before"}`
         document.title = `{{ __('sceneries never seen before — artist satomi suzuki | まだ見たことのない景色 — 作家さとみすずき') }}`
