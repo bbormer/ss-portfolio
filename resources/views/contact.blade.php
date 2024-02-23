@@ -35,7 +35,7 @@
               <input name="email" type="text" class="form-control w-[95%] lg:w-[400px] rounded border-green-300 border-2 p-2 mx-auto lg:mx-0" id="email" aria-describedby="emailHelp"
               placeholder=" {{ __('email (required)') }}" value="{{ old('email') }}"> 
               @error('email')
-              {{ $errors }}
+              {{-- {{ $errors }} --}}
               <p class="text-red-500 text-sm mt-1">{{ __('email is required/invalid') }}</p>
               @enderror
             </div>
